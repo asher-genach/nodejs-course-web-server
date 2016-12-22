@@ -93,7 +93,15 @@ app.get('/about', (req, res) => {
   });
 });
 
-// Route C - /bad
+// Route C - /projects
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page',
+  });
+});
+
+
+// Route D - /bad
 app.get('/bad', (req, res) => {
   res.send({ error: "Error"});
 });
